@@ -89,12 +89,12 @@ var D3Charts = function () {
            },
             data: {
                 columns: [
-                    ['data1', 300, 350, 300, 0, 0, 0],
-                    ['data2', 130, 100, 140, 200, 150, 50]
+                    ['night', 300, 350, 300, 0, 0, 0],
+                    ['day', 130, 100, 140, 200, 150, 50]
                 ],
                 types: {
-                    data1: 'area',
-                    data2: 'area-spline'
+                    night: 'area',
+                    day: 'area-spline'
                 }
             }
         });
@@ -120,6 +120,30 @@ var D3Charts = function () {
                 types: {
                     data1: 'step',
                     data2: 'area-step'
+                }
+            }
+        });
+
+                // Step Chart
+        var chart1_3 = c3.generate({
+            bindto: '#step-chart_1',
+            color: {
+              pattern: Colors,
+            },
+            padding: {
+              left: 30,
+              right: 15,
+              top: 0,
+              bottom: 0,
+           },
+            data: {
+                columns: [
+                    ['Hourly Drowsiness', 30, 35, 30, 0, 0, 10, 20, 40, 30, 24, 25, 40, 30, 35, 30, 0, 0, 10, 20, 40, 30, 24, 25, 40],
+                    //['data2', 130, 100, 140, 200, 150, 50]
+                ],
+                types: {
+                    'Hourly Drowsiness': 'step',
+                    //data2: 'area-step'
                 }
             }
         });
