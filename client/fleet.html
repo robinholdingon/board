@@ -36,6 +36,7 @@
    <script type="text/javascript" src="../assets/js/pages/charts/d3.js"></script>
    <script type="text/javascript" src="../vendor/plugins/c3charts/d3.min.js"></script>
    <script type="text/javascript" src="../vendor/plugins/c3charts/c3.min.js"></script>
+   <script type="text/javascript" src="../assets/js/board/fleet.js"></script>
    
    <!-- jQuery -->
    <script type="text/javascript" src="../vendor/jquery/jquery-1.11.1.min.js"></script>
@@ -808,12 +809,8 @@
                                        </div>
                                     </div>
                                 </div>
-
-
                              </div>
-                             
                         </div>
-
                         <div class="row">
                              <div class="col-md-6">
                                 <!-- Area Chart -->
@@ -845,6 +842,44 @@
                                 </div>
                              </div>
                         </div>
+                        <div class="row">
+                             <div class="col-md-6">
+                                <!-- Area Chart -->
+                                <div class="panel" id="pchart2_3">
+                                    <div class="panel-heading">
+                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                        </span>
+                                        <span class="panel-title"> Fuel Economy - Calendar</span>
+                                    </div>
+                                    <div class="panel-body bg-light dark">
+                                      <div class="tooltip-wrap">
+                                       <img src="../assets/img/placeholder/calendar chart.png" class="img-responsive thumbnail mr25">
+                                       <div class="tooltip-content"> 
+                                          <p>This chart can display the fuel economy for each day in both weekly (x-axis) and monthly (y-axis) manner.</p>
+                                          <p>It might be hard to give an objective fuel estimation, because 1) hard to fetch relative data 2) fuel economy is also related to the weight of the goods in the truck
+                                       </div>
+                                    </div>  
+                                    </div>
+                                </div>
+                             </div>
+
+                             <div class="col-md-6">
+                                <!-- Area Chart -->
+                                <div class="panel" id="pchart2_3">
+                                    <div class="panel-heading">
+                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                        </span>
+                                        <span class="panel-title"> Fuel Economy - location</span>
+                                    </div>
+                                    <div class="panel-body bg-light dark">
+                                       <div class="panel-body">
+                                          <div id="map_canvas3" class="map rounded"></div>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+
                      </div>
                      <div id="tab1_3" class="tab-pane">
                         <div class="row">
@@ -948,6 +983,8 @@
                    }
                 });
             });
+
+            //drawCalendarChart();
 
 
         });

@@ -36,6 +36,7 @@
    <script type="text/javascript" src="../assets/js/pages/charts/d3.js"></script>
    <script type="text/javascript" src="../vendor/plugins/c3charts/d3.min.js"></script>
    <script type="text/javascript" src="../vendor/plugins/c3charts/c3.min.js"></script>
+   <script type="text/javascript" src="../assets/js/board/fleet.js"></script>
    
    <!-- jQuery -->
    <script type="text/javascript" src="../vendor/jquery/jquery-1.11.1.min.js"></script>
@@ -617,6 +618,13 @@
                  <div class="tab-content pn br-n">
                      <div id="tab1_1" class="tab-pane active">
                         <div class="row">
+                           <!-- Gauge Chart -->
+                           <div class="col-md-6">
+                              <p>Driver's Drowsiness</p>
+                              <div id="power-gauge"></div>
+                           </div>
+                        </div>
+                        <div class="row">
                            <div class="col-md-6">
                            <!-- Scatter Chart -->
                               <div class="panel" id="pchart6">
@@ -785,7 +793,7 @@
                         <div class="row">
                              <div class="col-md-12">
                                  <!-- Step Chart -->
-                                <div class="panel" id="pchart3">
+                                 <div class="panel" id="pchart3">
                                     <div class="panel-heading">
                                        <span class="panel-title"> Fleet Averaged drowsiness  </span>
                                     </div>
@@ -948,6 +956,8 @@
                    }
                 });
             });
+            
+            drawGaugeChart();
 
 
         });
