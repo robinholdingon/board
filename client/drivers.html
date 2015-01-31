@@ -616,12 +616,80 @@
              </div>
              <div class="panel-body">
                  <div class="tab-content pn br-n">
+                     <!-- <div class="p40 bg-background bg-topbar bg-psuedo-tp"> -->
+
+                     <div class="pv30 ph40 bg-light dark br-b br-grey posr">
+                       <div class="table-layout">
+                           <div class="w200 text-center pr30">
+                               <img src="../assets/img/avatars/profile_avatar.jpg" class="responsive">
+                           </div>
+                           <div class="va-t m30">
+
+                              <h2 class=""> Tres Zhang <small> Profile </small>
+
+                              </h2>
+
+                              <p class="fs15 mb20">Basic Driver Info</p>
+
+                               <ul class="list-inline list-unstyled">
+                                   <li class="">
+                                       <a href="#" title="phone link">
+                                           <span class="fa fa-phone-square fs35 text-system"></span>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a href="#" title="email link">
+                                           <span class="fa fa-envelope-square fs35 text-muted"></span>
+                                       </a>
+                                   </li>
+                                   <li class="hidden">
+                                       <a href="#" title="external link">
+                                           <span class="fa fa-external-link-square fs35 text-muted"></span>
+                                       </a>
+                                   </li>
+                                 </ul>
+                                 <div class="btn-group profile-settings-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle pl20" data-toggle="dropdown">Manage
+                                        <span class="caret ml5"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li>
+                                            <a href="#">Action</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Another action</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                 </div>
+
+                           </div>
+                       </div>
+                     </div>
+
+
+
                      <div id="tab1_1" class="tab-pane active">
                         <div class="row">
                            <!-- Gauge Chart -->
-                           <div class="col-md-6">
+                           <div class="col-md-1"></div>
+                           <div class="col-md-4">
                               <p>Driver's Drowsiness</p>
-                              <div id="power-gauge"></div>
+                              <div id="drowsiness-gauge"></div>
+                           </div>
+                           <div class="col-md-3">
+                              <p>Driver's Speed</p>
+                              <div id="speed-gauge" ></div>
+                           </div>
+                           <div class="col-md-4">
+                              <p>Driving Hours</p>
+                              <div id="hour-gauge" ></div>
                            </div>
                         </div>
                         <div class="row">
@@ -631,15 +699,15 @@
                                  <div class="panel-heading">
                                     <span class="panel-icon"><i class="fa fa-pencil"></i>
                                     </span>
-                                    <span class="panel-title"> Real time Fleet Health</span>
+                                    <span class="panel-title"> Driving Stats</span>
                                  </div>
 
                                  <div class="panel-body bg-light dark">
                                     <!-- hover text -->
                                     <div class="tooltip-wrap">
-                                       <img src="../assets/img/placeholder/Fleet Realtime Health.png" class="img-responsive thumbnail mr25">
+                                       <img src="../assets/img/placeholder/driving stats.png" class="img-responsive thumbnail mr25">
                                        <div class="tooltip-content"> 
-                                          <p>When hovering one color box, the user should be given an floating hyperlink to display all the drivers in that category at that time</p>
+                                          <p>When hovering one color box, the user should be given an floating window to show the event information</p>
                                        </div>
                                     </div>
                                  </div>
@@ -649,13 +717,13 @@
                               <div class="panel" id="pchart6">
                                <div class="panel-heading">
                                    <span class="panel-title">
-                                       <span class="glyphicon glyphicon-map-marker"></span>Fleet Locations</span>
+                                       Driving Path</span>
                                </div>
                                <div class="panel-menu">
-                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_1","latlng":{"lat":27.6648274,"lng":-81.51575350000002},"tags":"drupal"}' data-title="Florida DrupalCamp - Feb 11 2013">
-                                       <span class="glyphicons glyphicons-google_maps pr5"></span>1</button>
+                                   <button type="button" class="btn btn-default light ph20 mr5">
+                                       Drowsiness Track</button>
                                    <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_2","latlng":{"lat":1.352083,"lng":103.81983600000001},"tags":"drupal"}' data-title="DrupalCamp Singapore - Mar 03 2013">
-                                       <span class="glyphicons glyphicons-google_maps pr5"></span>2</button>
+                                       Speed Track</button>
                                    
                                </div>
                                <div class="panel-body">
@@ -957,8 +1025,9 @@
                 });
             });
             
-            drawGaugeChart();
-
+            drawGaugeChart("drowsiness-gauge");
+            drawGaugeChart("speed-gauge");
+            drawGaugeChart("hour-gauge");
 
         });
     </script>

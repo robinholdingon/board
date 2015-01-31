@@ -43,23 +43,71 @@
 .RdYlGn .q10-11{fill:rgb(0,104,55)}
 
 /* for guage chart */
-#power-guage {
+#drowsiness-guage {
 	font-family:  Helvetica, Arial, sans-serif;
 	margin: 32px;
 }
 
-#power-gauge g.arc {
+#drowsiness-gauge g.arc {
 	fill: steelblue;
 }
 
-#power-gauge g.pointer {
+#drowsiness-gauge g.pointer {
 	fill: #e85116;
 	stroke: #b64011;
 }
 
-#power-gauge g.label text {
+#drowsiness-gauge g.label text {
 	text-anchor: middle;
 	font-size: 14px;
 	font-weight: bold;
 	fill: #666;
 }
+
+/* for speed gauge chart */
+/* for guage chart */
+#speed-guage {
+	font-family:  Helvetica, Arial, sans-serif;
+	margin: 32px;
+}
+
+#speed-gauge g.arc {
+	fill: steelblue;
+}
+
+#speed-gauge g.pointer {
+	fill: #e85116;
+	stroke: #b64011;
+}
+
+#speed-gauge g.label text {
+	text-anchor: middle;
+	font-size: 14px;
+	font-weight: bold;
+	fill: #666;
+}
+
+/* for hour gauge chart */
+/* for guage chart */
+#hour-guage {
+	font-family:  Helvetica, Arial, sans-serif;
+	margin: 32px;
+}
+
+#hour-gauge g.arc {
+	fill: steelblue;
+}
+
+#hour-gauge g.pointer {
+	fill: #e85116;
+	stroke: #b64011;
+}
+
+#hour-gauge g.label text {
+	text-anchor: middle;
+	font-size: 14px;
+	font-weight: bold;
+	fill: #666;
+}
+
+/* bubble chart */

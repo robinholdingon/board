@@ -104,7 +104,7 @@ var gauge = function(container, configuration) {
 		labelFormat					: d3.format(',g'),
 		labelInset					: 10,
 		
-		arcColorFn					: d3.interpolateHsl(d3.rgb('#e8e2ca'), d3.rgb('#3e6c0a'))
+		arcColorFn					: d3.interpolateHsl(d3.rgb('#00ff00'), d3.rgb('#ff0000'))
 	};
 	var range = undefined;
 	var r = undefined;
@@ -241,11 +241,15 @@ var gauge = function(container, configuration) {
 	return that;
 };
 
-function drawGaugeChart() {
-	var powerGauge = gauge('#power-gauge', {
-		size: 300,
+function drawGaugeChart(id) {
+	var chartSize = 320;
+	if (id != "drowsiness-gauge") {
+		chartSize = 280;
+	}
+	var powerGauge = gauge('#'+id, {
+		size: chartSize,
 		clipWidth: 300,
-		clipHeight: 300,
+		clipHeight: 200,
 		ringWidth: 60,
 		maxValue: 10,
 		transitionMs: 4000,
