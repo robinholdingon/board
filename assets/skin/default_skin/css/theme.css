@@ -11059,7 +11059,7 @@ tbody.collapse.in {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   z-index: 1000;
   display: none;
   float: left;
@@ -12725,7 +12725,7 @@ a.thumbnail.active {
   color: #ffffff;
   font-size: 14px;
   padding: 15px;
-  margin-bottom: 19px;
+  margin-bottom: 0px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1px;
 }
@@ -14916,7 +14916,7 @@ a.bg-white:hover {
 .panel-tabs {
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 /* tabs */
 .panel-tabs > li {
@@ -18461,7 +18461,7 @@ body.onload-check #topbar {
 ================================================= */
 /* If header is fixed modify primary containers padding */
 .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper {
-  padding-top: 60px;
+  padding: 60px;
 }
 /* Fixed Sidebar */
 #sidebar_left.affix {
@@ -19144,7 +19144,7 @@ body.buttons-page .zocial.icon.facebook:before {
   float: left;
   width: 20%;
   height: 100px;
-  padding: 5px;
+  padding: px;
   line-height: 1.4;
   text-align: center;
 }
@@ -19367,7 +19367,7 @@ ul.sidebar-nav ul#sideEight.sub-nav > li > a:hover {
 }
 .navbar .nav > li > a {
   color: #777;
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
   height: 59px;
   max-height: 59px;
@@ -20131,13 +20131,14 @@ body.tray-rescale .tray .affix-pane.affix {
   left: 0;
   width: 230px;
   min-height: 100%;
-  margin-top: 60px;
+  margin-top: 0px;
   padding-bottom: 40px;
   background-color: #30363e;
 }
 /* Sidebar Left Menu */
 .sidebar-menu {
   padding-bottom: 20px;
+  position:fixed;
 }
 /* Top Level Menu Items */
 .sidebar-menu > li {
@@ -20295,6 +20296,11 @@ body.tray-rescale .tray .affix-pane.affix {
 .sidebar-menu .sidebar-stat > a {
   height: auto;
   overflow: visible;
+}
+
+/* Sidebar transform*/
+.vertical-transform {
+  transform: rotate(-90deg);
 }
 /*===============================================
   B. Sidebar User Area
