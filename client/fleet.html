@@ -283,7 +283,33 @@
 
          <div class="panel">
              <div class="panel-heading">
-                 <ul class="nav panel-tabs-border panel-tabs">
+                  <div align="right">
+                     <li class="dropdown">
+                          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="../assets/img/logos/FedExSquare.jpeg" alt="avatar" class="mw50 br80 mr15">
+                          <span> Fedex Express</span>
+                          <span class="caret caret-tp"></span>
+                          </a>
+                          <span style="color:green">Status: Normal</span>
+                          <ul class="dropdown-menu dropdown-persist pn w250 bg-white" role="menu" align="right">
+                              <li class="br-t of-h">
+                                 <a href="#" class="fw600 p12 animated animated-short fadeInDown">
+                                    <span class="glyphicons glyphicons-bullhorn"></span> Broadcast Voicemail
+                                 </a>
+                              </li>
+                              <li class="br-t of-h">
+                                 <a href="#" class="fw600 p12 animated animated-short fadeInDown">
+                                    <span class="glyphicons glyphicons-message_plus"></span> Broadcast Message
+                                 </a>
+                              </li>
+                              <li class="br-t of-h">
+                                 <a href="#" class="fw600 p12 animated animated-short fadeInDown">
+                                    <span class="glyphicons glyphicons-suitcase"></span> Dispatch Task
+                                 </a>
+                              </li>
+                          </ul>
+                     </li>
+                  </div>
+                  <ul class="nav panel-tabs-border panel-tabs">
                      <li class="active">
                          <a href="#tab1_1" data-toggle="tab">Monitoring</a>
                      </li>
@@ -293,47 +319,16 @@
                      <li>
                          <a href="#tab1_3" data-toggle="tab">Summary</a>
                      </li>
-                 </ul>
+                  </ul>
+
              </div>
              <div class="panel-body">
                  <div class="tab-content pn br-n">
-                     <div class="pv30 ph40 bg-light dark br-b br-grey posr">
-                        <div class="table-layout">
-                           <div class="w200 text-center pr30">
-                               <img src="../assets/img/logos/FeDex.jpeg" class="responsive">
-                           </div>
-                           <div class="va-t m30">
-
-                              <h2 class=""> Fedex Express<small> Profile </small>
-
-                              </h2>
-
-                               <ul class="list-inline list-unstyled">
-                                   <li class="">
-                                       <a href="#" title="phone link">
-                                           <span class="fa fa-phone-square fs35 text-system"></span>
-                                       </a>
-                                   </li>
-                                   <li>
-                                       <a href="#" title="email link">
-                                           <span class="fa fa-envelope-square fs35 text-muted"></span>
-                                       </a>
-                                   </li>
-                                   <li class="hidden">
-                                       <a href="#" title="external link">
-                                           <span class="fa fa-external-link-square fs35 text-muted"></span>
-                                       </a>
-                                   </li>
-                                 </ul>
-
-                           </div>
-                       </div>
-                     </div>
                      <div id="tab1_1" class="tab-pane active">
                         <div class="row">
                            <div class="col-md-6">
                            <!-- Scatter Chart -->
-                              <div class="panel" id="pchart6">
+                              <div class="panel panel-board" id="pchart6">
                                  <div class="panel-heading">
                                     <span class="panel-icon"><i class="fa fa-pencil"></i>
                                     </span>
@@ -352,7 +347,7 @@
                               </div>
                            </div>
                            <div class="col-md-6">
-                              <div class="panel" id="pchart6">
+                              <div class="panel panel-board" id="pchart6">
                                <div class="panel-heading">
                                    <span class="panel-title">
                                        <span class="glyphicon glyphicon-map-marker"></span>Fleet Locations</span>
@@ -412,7 +407,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-user text-primary"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicon glyphicon-user text-primary"></span> Thres Zhang joined the fleet</span>
@@ -436,7 +431,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-suitcase text-info"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicons glyphicons-suitcase"></span> A task was dispatched to Cuatro Li</span>
@@ -451,7 +446,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-message_out text-info"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicons glyphicons-message_out"></span> A message was sent to the fleet</span>
@@ -466,7 +461,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-warning_sign text-info"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicons glyphicons-warning_sign"></span> Cinco Wang was involved in an accident</span>
@@ -499,7 +494,7 @@
                         <div class="row">
                              <div class="col-md-12">
                                  <!-- Step Chart -->
-                                <div class="panel" id="pchart3">
+                                <div class="panel-board" id="pchart3">
                                     <div class="panel-heading">
                                        <span class="panel-title"> Fleet Averaged drowsiness  </span>
                                     </div>
@@ -527,7 +522,7 @@
                         <div class="row">
                              <div class="col-md-6">
                                 <!-- Area Chart -->
-                                <div class="panel" id="pchart2">
+                                <div class="panel-board" id="pchart2">
                                     <div class="panel-heading">
                                         <span class="panel-icon"><i class="fa fa-pencil"></i>
                                         </span>
@@ -541,7 +536,7 @@
 
                              <div class="col-md-6">
                                 <!-- Area Chart -->
-                                <div class="panel" id="pchart2">
+                                <div class="panel-board" id="pchart2">
                                     <div class="panel-heading">
                                         <span class="panel-icon"><i class="fa fa-pencil"></i>
                                         </span>
@@ -558,7 +553,7 @@
                         <div class="row">
                              <div class="col-md-6">
                                 <!-- Area Chart -->
-                                <div class="panel" id="pchart2_3">
+                                <div class="panel-board" id="pchart2_3">
                                     <div class="panel-heading">
                                         <span class="panel-icon"><i class="fa fa-pencil"></i>
                                         </span>
@@ -578,7 +573,7 @@
 
                              <div class="col-md-6">
                                 <!-- Area Chart -->
-                                <div class="panel" id="pchart2_3">
+                                <div class="panel-board" id="pchart2_3">
                                     <div class="panel-heading">
                                         <span class="panel-icon"><i class="fa fa-pencil"></i>
                                         </span>

@@ -14237,6 +14237,35 @@ a.list-group-item-dark.active:focus {
 .panel-dark > .panel-body.border {
   border: 3px solid #3b3f4f;
 }
+.panel-board.panel-border {
+  border-color: #3b3f4f;
+}
+.panel-board > .panel-heading {
+  color: #ffffff;
+  background-color: #6b6f7f;
+  border-color: #3b3f4f;
+}
+.panel-board > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #3b3f4f;
+}
+.panel-board > .panel-heading .badge {
+  color: #3b3f4f;
+  background-color: #ffffff;
+}
+.panel-board > .panel-heading > .panel-title {
+  color: #ffffff;
+}
+.panel-board > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #3b3f4f;
+}
+.panel-board > .panel-body.fill {
+  color: #FFF;
+  border-color: #575d75;
+  background-color: #575d75;
+}
+.panel-board > .panel-body.border {
+  border: 3px solid #3b3f4f;
+}
 /*==================================================
   Responsive Embeds
   Credit: Nicolas Gallagher and SUIT CSS.
@@ -17947,6 +17976,9 @@ i.field-icon-right {
 }
 .br64 {
   border-radius: 64px !important;
+}
+.br80 {
+  border-radius: 80px !important;
 }
 /* Border Width */
 .bw1 {

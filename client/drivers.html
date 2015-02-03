@@ -289,10 +289,11 @@
              <div class="panel-heading">
                   <div align="right">
                      <li class="dropdown">
-                          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="../assets/img/avatars/5.jpg" alt="avatar" class="mw30 br64 mr15">
+                          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="../assets/img/avatars/5.jpg" alt="avatar" class="mw50 br80 mr15">
                               <span>Tres Zhang</span>
                               <span class="caret caret-tp"></span>
                           </a>
+                          <span style="color:green">Status: Normal</span>
                           <ul class="dropdown-menu dropdown-persist pn w250 bg-white" role="menu" align="right">
                               <li class="bg-light br-b br-light p8">
                                   <span class="pull-left ml10">
@@ -352,11 +353,10 @@
                  <div class="tab-content pn br-n">
                      <!-- <div class="p40 bg-background bg-topbar bg-psuedo-tp"> -->
 
-                     <!-- previously designed as a row for driver info -->
-                     <!--div class="pv30 ph40 bg-light dark br-b br-grey posr">
+                     <!--div>
                        <div class="table-layout">
                            <div class="w200 text-center pr30">
-                               <img src="../assets/img/avatars/profile_avatar.jpg" class="responsive">
+                               <img src="../assets/img/avatars/profile_avatar.jpg" class="mw50 br80 mr15">
                            </div>
                            <div class="va-t m30">
 
@@ -391,6 +391,24 @@
 
                      <div id="tab1_1" class="tab-pane active">
                         <div class="row">
+                           <div class="col-md-12">
+                              <div class="panel panel-board" id="pchart6">
+                                 <div class="panel-heading">
+                                    <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                    </span>
+                                    <span class="panel-title"> Realtime Metrics</span>
+                                    <span>| Time: 12:23:00, Dec 24, 2014</span> 
+                                 </div>
+                                 <div class="panel-body bg-light dark">
+                                    <ul>
+                                       <li>Overall status</li>
+                                       <li>Drowsy Driver</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
                            <!-- Gauge Chart -->
                            <div class="col-md-1"></div>
                            <div class="col-md-4">
@@ -409,7 +427,7 @@
                         <div class="row">
                            <div class="col-md-6">
                            <!-- Scatter Chart -->
-                              <div class="panel" id="pchart6">
+                              <div class="panel-board" id="pchart6">
                                  <div class="panel-heading">
                                     <span class="panel-icon"><i class="fa fa-pencil"></i>
                                     </span>
@@ -428,7 +446,7 @@
                               </div>
                            </div>
                            <div class="col-md-6">
-                              <div class="panel" id="pchart6">
+                              <div class="panel-board" id="pchart6">
                                <div class="panel-heading">
                                    <span class="panel-title">
                                        Driving Path</span>
@@ -488,7 +506,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-user text-primary"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicon glyphicon-user text-primary"></span> Thres Zhang joined the fleet</span>
@@ -512,7 +530,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-suitcase text-info"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicons glyphicons-suitcase"></span> A task was dispatched to Cuatro Li</span>
@@ -527,7 +545,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-message_out text-info"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicons glyphicons-message_out"></span> A message was sent to the fleet</span>
@@ -542,7 +560,7 @@
                                                   <div class="timeline-icon">
                                                       <span class="glyphicons glyphicons-warning_sign text-info"></span>
                                                   </div>
-                                                  <div class="panel">
+                                                  <div class="panel-board">
                                                       <div class="panel-heading">
                                                           <span class="panel-title">
                                                               <span class="glyphicons glyphicons-warning_sign"></span> Cinco Wang was involved in an accident</span>
@@ -575,7 +593,7 @@
                         <div class="row">
                              <div class="col-md-12">
                                  <!-- Step Chart -->
-                                 <div class="panel" id="pchart3">
+                                 <div class="panel-board" id="pchart3">
                                     <div class="panel-heading">
                                        <span class="panel-title"> Fleet Averaged drowsiness  </span>
                                     </div>
@@ -607,7 +625,7 @@
                         <div class="row">
                              <div class="col-md-6">
                                 <!-- Area Chart -->
-                                <div class="panel" id="pchart2">
+                                <div class="panel-board" id="pchart2">
                                     <div class="panel-heading">
                                         <span class="panel-icon"><i class="fa fa-pencil"></i>
                                         </span>
@@ -621,7 +639,7 @@
 
                              <div class="col-md-6">
                                 <!-- Area Chart -->
-                                <div class="panel" id="pchart2">
+                                <div class="panel-board" id="pchart2">
                                     <div class="panel-heading">
                                         <span class="panel-icon"><i class="fa fa-pencil"></i>
                                         </span>
