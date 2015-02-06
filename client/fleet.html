@@ -326,7 +326,38 @@
                  <div class="tab-content pn br-n">
                      <div id="tab1_1" class="tab-pane active">
                         <div class="row">
-                           <div class="col-md-6">
+                           <div class="col-md-12">
+                              <div class="panel panel-board" id="pchart6">
+                               <div class="panel-heading">
+                                   <span class="panel-title">
+                                       <span class="glyphicon glyphicon-map-marker"></span>Fleet Locations</span>
+                              </div>
+
+                              <div class="panel-menu">
+                                 <span class="panel-icon"><i class="fa fa-circle" style="color:red"></i> Risky : 4/24 | 
+                                 </span>
+                                 <span class="panel-icon"><i class="fa fa-circle" style="color:orange"></i> Drowsy : 2/24 | 
+                                 </span>
+                                 <span class="panel-icon"><i class="fa fa-circle" style="color:green"></i> Normal : 16/24 | 
+                                 </span>
+                                 <span class="panel-icon"><i class="fa fa-circle" style="color:grey"></i> Idle : 2/24
+                                 </span>
+                              </div>
+                              <!--div class="panel-menu">
+                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_1","latlng":{"lat":27.6648274,"lng":-81.51575350000002},"tags":"drupal"}' data-title="Florida DrupalCamp - Feb 11 2013">
+                                       <span class="glyphicons glyphicons-google_maps pr5"></span>1</button>
+                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_2","latlng":{"lat":1.352083,"lng":103.81983600000001},"tags":"drupal"}' data-title="DrupalCamp Singapore - Mar 03 2013">
+                                       <span class="glyphicons glyphicons-google_maps pr5"></span>2</button>
+                                   
+                              </div-->
+                              <div class="panel-body">
+                                 <div id="map_canvas2" class="map rounded"></div>
+                              </div>
+                              </div>
+                           </div>                           
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12">
                            <!-- Scatter Chart -->
                               <div class="panel panel-board" id="pchart6">
                                  <div class="panel-heading">
@@ -340,30 +371,130 @@
                                     <div class="tooltip-wrap">
                                        <img src="../assets/img/placeholder/Fleet Realtime Health.png" class="img-responsive thumbnail mr25">
                                        <div class="tooltip-content"> 
-                                          <p>When hovering one color box, the user should be given an floating hyperlink to display all the drivers in that category at that time</p>
+                                          <p>I am gonna make this chart horizontal instead of vertical, the same wide with the page, with the data from the beginning of day till asOf time.</p>
                                        </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <div class="col-md-6">
-                              <div class="panel panel-board" id="pchart6">
-                               <div class="panel-heading">
-                                   <span class="panel-title">
-                                       <span class="glyphicon glyphicon-map-marker"></span>Fleet Locations</span>
-                               </div>
-                               <div class="panel-menu">
-                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_1","latlng":{"lat":27.6648274,"lng":-81.51575350000002},"tags":"drupal"}' data-title="Florida DrupalCamp - Feb 11 2013">
-                                       <span class="glyphicons glyphicons-google_maps pr5"></span>1</button>
-                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_2","latlng":{"lat":1.352083,"lng":103.81983600000001},"tags":"drupal"}' data-title="DrupalCamp Singapore - Mar 03 2013">
-                                       <span class="glyphicons glyphicons-google_maps pr5"></span>2</button>
-                                   
-                               </div>
-                               <div class="panel-body">
-                                   <div id="map_canvas2" class="map rounded"></div>
-                               </div>
-                              </div>
-                           </div>
+                        </div>
+                     </div>
+                     <div id="tab1_2" class="tab-pane">
+                        <div class="row">
+                             <div class="col-md-12">
+                                 <!-- Step Chart -->
+                                <div class="panel-board" id="pchart3">
+                                    <div class="panel-heading">
+                                       <span class="panel-title"> Fleet Averaged drowsiness  </span>
+                                    </div>
+
+                                    <div class="panel-body bg-light dark">
+                                       <button type="button" class="btn btn-default light ph20 mr5"></span>Hours in Day</button>
+
+                                       <button type="button" class="btn btn-default light ph20 mr5"></span>Days in Week</button>
+
+                                       <button type="button" class="btn btn-default light ph20 mr5"></span>Months in Year</button>
+
+                                       <div id="step-chart_1" style="height: 370px; width: 100%;"></div>
+                                       <!-- hover text -->
+                                       <div class="tooltip-wrap">
+                                          <img src="../assets/img/placeholder/range selector.png" class="img-responsive thumbnail mr25">
+                                          <div class="tooltip-content"> 
+                                             <p> 
+                                             I want to put a range selector here below the chart so the user can select previous or current time window to compare the drowsiness and seek for rules and improvements. Weird that the chart is initially out of the container box. Drag the browser boarder and the chart will fit in.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="row">
+                             <div class="col-md-6">
+                                <!-- Area Chart -->
+                                <div class="panel-board" id="pchart2">
+                                    <div class="panel-heading">
+                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                        </span>
+                                        <span class="panel-title"> Drowsiness - Duration</span>
+                                    </div>
+                                    <div class="panel-body bg-light dark">
+                                        <div id="area-chart" style="height: 370px; width: 100%;"></div>
+                                    </div>
+                                </div>
+                             </div>
+
+                             <div class="col-md-6">
+                                <!-- Area Chart -->
+                                <div class="panel-board" id="pchart2">
+                                    <div class="panel-heading">
+                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                        </span>
+                                        <span class="panel-title"> Drowsiness - location</span>
+                                    </div>
+                                    <div class="panel-body bg-light dark">
+                                       <div class="panel-body">
+                                          <div id="map_canvas3" class="map rounded"></div>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="row">
+                             <div class="col-md-6">
+                                <!-- Area Chart -->
+                                <div class="panel-board" id="pchart2_3">
+                                    <div class="panel-heading">
+                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                        </span>
+                                        <span class="panel-title"> Fuel Economy - Calendar</span>
+                                    </div>
+                                    <div class="panel-body bg-light dark">
+                                      <div class="tooltip-wrap">
+                                       <img src="../assets/img/placeholder/calendar chart.png" class="img-responsive thumbnail mr25">
+                                       <div class="tooltip-content"> 
+                                          <p>This chart can display the fuel economy for each day in both weekly (x-axis) and monthly (y-axis) manner.</p>
+                                          <p>It might be hard to give an objective fuel estimation, because 1) hard to fetch relative data 2) fuel economy is also related to the weight of the goods in the truck
+                                       </div>
+                                    </div>  
+                                    </div>
+                                </div>
+                             </div>
+
+                             <div class="col-md-6">
+                                <!-- Area Chart -->
+                                <div class="panel-board" id="pchart2_3">
+                                    <div class="panel-heading">
+                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                        </span>
+                                        <span class="panel-title"> Fuel Economy - location</span>
+                                    </div>
+                                    <div class="panel-body bg-light dark">
+                                       <div class="panel-body">
+                                          <div id="map_canvas3" class="map rounded"></div>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+
+                     </div>
+                     <div id="tab1_3" class="tab-pane">
+                        <div class="row">
+                           <ul id="glyphicons-icon-list" class="list">
+                              <li>
+                                 <span class="glyphicons glyphicons-message_plus"></span>Broadcast Message
+                              </li>
+                              <li>
+                                 <span class="glyphicons glyphicons-bullhorn"></span>Broadcast Voicemail
+                              </li>
+                              <li>
+                                 <span class="glyphicons glyphicons-calendar"></span>Fleet Calendar
+                              </li>
+                              <li>
+                                 <span class="glyphicons glyphicons-suitcase"></span>Dispatch Tasks
+                              </li>
+                           </ul>
+                           <p>Once a button is clicked, a floating window will pop up with management forms and submit button</p>
                         </div>
                         <div class="row">
 
@@ -488,124 +619,6 @@
                               </section>
                               <!-- End: Content -->
                            </section>
-                        </div>
-                     </div>
-                     <div id="tab1_2" class="tab-pane">
-                        <div class="row">
-                             <div class="col-md-12">
-                                 <!-- Step Chart -->
-                                <div class="panel-board" id="pchart3">
-                                    <div class="panel-heading">
-                                       <span class="panel-title"> Fleet Averaged drowsiness  </span>
-                                    </div>
-
-                                    <div class="panel-body bg-light dark">
-                                       <button type="button" class="btn btn-default light ph20 mr5"></span>Hours in Day</button>
-
-                                       <button type="button" class="btn btn-default light ph20 mr5"></span>Days in Week</button>
-
-                                       <button type="button" class="btn btn-default light ph20 mr5"></span>Months in Year</button>
-
-                                       <div id="step-chart_1" style="height: 370px; width: 100%;"></div>
-                                       <!-- hover text -->
-                                       <div class="tooltip-wrap">
-                                          <img src="../assets/img/placeholder/range selector.png" class="img-responsive thumbnail mr25">
-                                          <div class="tooltip-content"> 
-                                             <p> 
-                                             I want to put a range selector here below the chart so the user can select previous or current time window to compare the drowsiness and seek for rules and improvements. Weird that the chart is initially out of the container box. Drag the browser boarder and the chart will fit in.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="row">
-                             <div class="col-md-6">
-                                <!-- Area Chart -->
-                                <div class="panel-board" id="pchart2">
-                                    <div class="panel-heading">
-                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
-                                        </span>
-                                        <span class="panel-title"> Drowsiness - Duration</span>
-                                    </div>
-                                    <div class="panel-body bg-light dark">
-                                        <div id="area-chart" style="height: 370px; width: 100%;"></div>
-                                    </div>
-                                </div>
-                             </div>
-
-                             <div class="col-md-6">
-                                <!-- Area Chart -->
-                                <div class="panel-board" id="pchart2">
-                                    <div class="panel-heading">
-                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
-                                        </span>
-                                        <span class="panel-title"> Drowsiness - location</span>
-                                    </div>
-                                    <div class="panel-body bg-light dark">
-                                       <div class="panel-body">
-                                          <div id="map_canvas3" class="map rounded"></div>
-                                       </div>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="row">
-                             <div class="col-md-6">
-                                <!-- Area Chart -->
-                                <div class="panel-board" id="pchart2_3">
-                                    <div class="panel-heading">
-                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
-                                        </span>
-                                        <span class="panel-title"> Fuel Economy - Calendar</span>
-                                    </div>
-                                    <div class="panel-body bg-light dark">
-                                      <div class="tooltip-wrap">
-                                       <img src="../assets/img/placeholder/calendar chart.png" class="img-responsive thumbnail mr25">
-                                       <div class="tooltip-content"> 
-                                          <p>This chart can display the fuel economy for each day in both weekly (x-axis) and monthly (y-axis) manner.</p>
-                                          <p>It might be hard to give an objective fuel estimation, because 1) hard to fetch relative data 2) fuel economy is also related to the weight of the goods in the truck
-                                       </div>
-                                    </div>  
-                                    </div>
-                                </div>
-                             </div>
-
-                             <div class="col-md-6">
-                                <!-- Area Chart -->
-                                <div class="panel-board" id="pchart2_3">
-                                    <div class="panel-heading">
-                                        <span class="panel-icon"><i class="fa fa-pencil"></i>
-                                        </span>
-                                        <span class="panel-title"> Fuel Economy - location</span>
-                                    </div>
-                                    <div class="panel-body bg-light dark">
-                                       <div class="panel-body">
-                                          <div id="map_canvas3" class="map rounded"></div>
-                                       </div>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-
-                     </div>
-                     <div id="tab1_3" class="tab-pane">
-                        <div class="row">
-                           <ul id="glyphicons-icon-list" class="list">
-                              <li>
-                                 <span class="glyphicons glyphicons-message_plus"></span>Broadcast Message
-                              </li>
-                              <li>
-                                 <span class="glyphicons glyphicons-bullhorn"></span>Broadcast Voicemail
-                              </li>
-                              <li>
-                                 <span class="glyphicons glyphicons-calendar"></span>Fleet Calendar
-                              </li>
-                              <li>
-                                 <span class="glyphicons glyphicons-suitcase"></span>Dispatch Tasks
-                              </li>
-                           </ul>
-                           <p>Once a button is clicked, a floating window will pop up with management forms and submit button</p>
                         </div>
                      </div>
                  </div>

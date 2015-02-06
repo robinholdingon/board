@@ -37,6 +37,7 @@
    <script type="text/javascript" src="../vendor/plugins/c3charts/d3.min.js"></script>
    <script type="text/javascript" src="../vendor/plugins/c3charts/c3.min.js"></script>
    <script type="text/javascript" src="../assets/js/board/fleet.js"></script>
+   <script type="text/javascript" src="../assets/js/board/driver.js"></script>
    
    <!-- jQuery -->
    <script type="text/javascript" src="../vendor/jquery/jquery-1.11.1.min.js"></script>
@@ -404,6 +405,9 @@
                                        <li>Overall status</li>
                                        <li>Drowsy Driver</li>
                                     </ul>
+                                    <div id="holder">
+         <div class="concentric" data-role="concentric" data-width=420 data-height=420 data-thickness=15></div>
+         </div>
                                  </div>
                               </div>
                            </div>
@@ -760,6 +764,8 @@
             drawGaugeChart("drowsiness-gauge");
             drawGaugeChart("speed-gauge");
             drawGaugeChart("hour-gauge");
+
+            drawRingChart();
 
         });
     </script>
