@@ -400,32 +400,69 @@
                                     <span class="panel-title"> Realtime Metrics</span>
                                     <span>| Time: 12:23:00, Dec 24, 2014</span> 
                                  </div>
-                                 <div class="panel-body bg-light dark">
-                                    <ul>
-                                       <li>Overall status</li>
-                                       <li>Drowsy Driver</li>
-                                    </ul>
-                                    <div id="holder">
-         <div class="concentric" data-role="concentric" data-width=420 data-height=420 data-thickness=15></div>
-         </div>
+                                 <div class="row">
+                                    <div class="col-md-3">
+                                          <h4>Harsh Turn</h4>
+                                          <div id="holder">
+                                             <div class="concentric" data-role="concentric" data-width=320 data-height=320 data-thickness=20></div>
+                                             </div>
+
+                                    </div>
+                                    <div class="col-md-3">
+                                          <h4>Quick Start</h4>
+                                          <div id="holder">
+                                             <div class="concentric" data-role="concentric" data-width=320 data-height=320 data-thickness=20></div>
+                                             </div>
+
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                          <h4>Overspeed</h4>
+                                          <div id="holder">
+                                             <div class="concentric" data-role="concentric" data-width=320 data-height=320 data-thickness=20></div>
+                                             </div>
+
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                          <h4>Hard Corner</h4>
+                                          <div id="holder">
+                                             <div class="concentric" data-role="concentric" data-width=320 data-height=320 data-thickness=20></div>
+                                             </div>
+
+                                    </div>
                                  </div>
                               </div>
                            </div>
                         </div>
+
                         <div class="row">
-                           <!-- Gauge Chart -->
-                           <div class="col-md-1"></div>
-                           <div class="col-md-4">
-                              <p>Driver's Drowsiness</p>
-                              <div id="drowsiness-gauge"></div>
-                           </div>
-                           <div class="col-md-3">
-                              <p>Driver's Speed</p>
-                              <div id="speed-gauge" ></div>
-                           </div>
-                           <div class="col-md-4">
-                              <p>Driving Hours</p>
-                              <div id="hour-gauge" ></div>
+                           <div class="col-md-12">
+                              <div class="panel panel-board">
+                                 <div class="panel-heading">
+                                    <span class="panel-icon"><i class="fa fa-pencil"></i>
+                                    </span>
+                                    <span class="panel-title"> Gauges</span>
+                                 </div>
+                                 <div class="row">
+                                    <!-- Gauge Chart -->
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-4">
+                                       <p>Driver's Drowsiness</p>
+                                       <div id="drowsiness-gauge"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                       <p>Driver's Speed</p>
+                                       <div id="speed-gauge" ></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <p>Driving Hours</p>
+                                       <div id="hour-gauge" ></div>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                         <div class="row">

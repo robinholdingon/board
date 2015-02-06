@@ -38,7 +38,7 @@ function drawRingChart() {
 					
 				var value_group = chart.append("svg:g")
 					.attr("class", "value_group")
-					.attr("transform", "translate("+ -(w*.24)+","+ -(h*.09)+")");
+					.attr("transform", "translate("+ -(w*.30)+","+ -(h*-.00)+")");
 
 				var path_group = chart.append("svg:g")
 					.attr("class", "path_group")
@@ -72,7 +72,7 @@ function drawRingChart() {
 						segmentValueSum+= va.value;
 					});
 
-					segmentValueSum = 200;//consistent total accross different data sets
+					segmentValueSum = 80;//consistent total accross different data sets
 
 					$.each(data[0].segments, function(ri, value) {
 						var segmentValue = value.value;
@@ -186,7 +186,7 @@ function drawRingChart() {
 						return 0;
                     })
 					.attr("dy", function(d, i){
-						return (thickness + 4)*i;
+						return -(thickness + 4)*i;
 					})
 					.attr("text-anchor", function(d){
 						return "start";
@@ -296,25 +296,20 @@ function drawRingChart() {
 				{
 					"segments": [
 						{
-							"label": "Turkey",
+							"label": "Driver's asof now",
 							"value": 25,
 							"color": "red"
 						},
 						{
-							"label": "United States",
-							"value": 40,
+							"label": "Driver's average",
+							"value": 20,
 							"color": "blue"							
 						},
 						{
-							"label": "Switzerland",
-							"value": 60,
+							"label": "Fleet‘s average",
+							"value": 30,
 							"color": "green"							
-						},
-						{
-							"label": "Iceland",
-							"value": 80,
-							"color": "gold"
-						}							
+						}						
 					]
 				}
 			]
