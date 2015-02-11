@@ -134,3 +134,19 @@
 	stroke-width: 1px;
 	opacity:0.8;
 }
+
+/* Stacked Bar Chart */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}

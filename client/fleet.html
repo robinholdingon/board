@@ -286,10 +286,9 @@
                   <div align="right">
                      <li class="dropdown">
                           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="../assets/img/logos/FedExSquare.jpeg" alt="avatar" class="mw50 br80 mr15">
-                          <span> Fedex Express</span>
+                          <span> Fleet Management</span>
                           <span class="caret caret-tp"></span>
                           </a>
-                          <span style="color:green">Status: Normal</span>
                           <ul class="dropdown-menu dropdown-persist pn w250 bg-white" role="menu" align="right">
                               <li class="br-t of-h">
                                  <a href="#" class="fw600 p12 animated animated-short fadeInDown">
@@ -323,10 +322,81 @@
 
              </div>
              <div class="panel-body">
+
                  <div class="tab-content pn br-n">
                      <div id="tab1_1" class="tab-pane active">
                         <div class="row">
                            <div class="col-md-12">
+                              <div class="panel panel-board" id="pchart6">
+                               <div class="panel-heading">
+                                   <span class="panel-title">
+                                       <span class="glyphicon glyphicon-map-marker"></span> Metrics </span>
+                              </div>
+                              <div class="pricing-table mt25">
+
+                                  <div class="col-sm-3">
+                                      <div class="pricing-plan pricing-compare">
+                                          <div class="plan-desc">
+                                              <h2 class="mtn">Current Status: <span style="color:green">Good</span></h2>
+                                              <img src="../assets/img/placeholder/vernier.png"/>
+                                              <p>Accident: 0</p>
+                                              <p>Drowsiness Level: 0.1</p>
+                                              <p>Distraction Level: 0.15</p>
+
+
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-3">
+                                      <div class="pricing-plan plan-info">
+                                          <div class="plan-header">
+                                              <h2 class="mtn">Drowsy Drivers</h2>
+                                          </div>
+                                          <div class="plan-pricing">
+                                              <h2><b style="color:red">4</b>/24</h2>
+                                              <p>MAX: 6 | MIN: 0 | AVG: 2.6</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                      <div class="pricing-plan plan-warning">
+                                          <div class="plan-header">
+                                              <h2 class="mtn">Harsh Start / Brake</h2>
+                                          </div>
+                                          <div class="plan-pricing">
+                                              <h2><b style="color:green">14</b></h2>
+                                              <p>MAX: 30 | MIN: 12 | AVG: 18.2</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                      <div class="pricing-plan plan-warning">
+                                          <div class="plan-header">
+                                              <h2 class="mtn">Overspeed</h2>
+                                          </div>
+                                          <div class="plan-pricing">
+                                              <h2><b style="color:green">14</b></h2>
+                                              <p>MAX: 30 | MIN: 12 | AVG: 18.2</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                      <div class="pricing-plan plan-warning">
+                                          <div class="plan-header">
+                                              <h2 class="mtn">Hard Corner</h2>
+                                          </div>
+                                          <div class="plan-pricing">
+                                              <h2><b style="color:green">14</b></h2>
+                                              <p>MAX: 30 | MIN: 12 | AVG: 18.2</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                           </div>                          
+                        </div>
+                        <div class="row">
+                           <div class="col-md-6">
                               <div class="panel panel-board" id="pchart6">
                                <div class="panel-heading">
                                    <span class="panel-title">
@@ -343,21 +413,18 @@
                                  <span class="panel-icon"><i class="fa fa-circle" style="color:grey"></i> Idle : 2/24
                                  </span>
                               </div>
-                              <!--div class="panel-menu">
-                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_1","latlng":{"lat":27.6648274,"lng":-81.51575350000002},"tags":"drupal"}' data-title="Florida DrupalCamp - Feb 11 2013">
-                                       <span class="glyphicons glyphicons-google_maps pr5"></span>1</button>
-                                   <button type="button" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_2","latlng":{"lat":1.352083,"lng":103.81983600000001},"tags":"drupal"}' data-title="DrupalCamp Singapore - Mar 03 2013">
-                                       <span class="glyphicons glyphicons-google_maps pr5"></span>2</button>
-                                   
-                              </div-->
+                              <div class="panel-menu">
+                                   <input type="hidden" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_1","latlng":{"lat":37.6648274,"lng":-81.51575350000002},"tags":"drupal"}' data-title="Tres Zhang"/>
+                                    <input type="hidden" class="btn btn-default light ph20 mr5" data-gmapping='{"id":"m_1","latlng":{"lat":33.6648274,"lng":-98.51575350000002},"tags":"drupal"}' data-title="Cuatro Li"/>
+
+
+                              </div>
                               <div class="panel-body">
                                  <div id="map_canvas2" class="map rounded"></div>
                               </div>
                               </div>
-                           </div>                           
-                        </div>
-                        <div class="row">
-                           <div class="col-md-12">
+                           </div>   
+                           <div class="col-md-6">
                            <!-- Scatter Chart -->
                               <div class="panel panel-board" id="pchart6">
                                  <div class="panel-heading">
@@ -369,7 +436,8 @@
                                  <div class="panel-body bg-light dark">
                                     <!-- hover text -->
                                     <div class="tooltip-wrap">
-                                       <img src="../assets/img/placeholder/Fleet Realtime Health.png" class="img-responsive thumbnail mr25">
+                                       <div id="stacked-bar-chart">
+                                       </div>
                                        <div class="tooltip-content"> 
                                           <p>I am gonna make this chart horizontal instead of vertical, the same wide with the page, with the data from the beginning of day till asOf time.</p>
                                        </div>
@@ -395,7 +463,7 @@
 
                                        <button type="button" class="btn btn-default light ph20 mr5"></span>Months in Year</button>
 
-                                       <div id="step-chart_1" style="height: 370px; width: 100%;"></div>
+                                       <div id="step-chart_2" style="height: 370px; width: 100%;"></div>
                                        <!-- hover text -->
                                        <div class="tooltip-wrap">
                                           <img src="../assets/img/placeholder/range selector.png" class="img-responsive thumbnail mr25">
@@ -655,6 +723,7 @@
                    'disableDefaultUI': true,
                    'callback': function() {
                         var self = this;
+
                         $("[data-gmapping]").each(function(i, el) {
                             var data = $(el).data('gmapping');
                             var title = $(el).data('title');
@@ -662,7 +731,8 @@
                                'id': data.id,
                                'tags': data.tags,
                                'position': new google.maps.LatLng(data.latlng.lat, data.latlng.lng),
-                               'bounds': true
+                               'bounds': true,
+                               'icon': 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png'
                             }, function(map, marker) {
                                $(el).click(function() {
                                     $(marker).triggerEvent('click');
@@ -706,6 +776,7 @@
             });
 
             //drawCalendarChart();
+            drawStackedBarChart(50);
 
 
         });

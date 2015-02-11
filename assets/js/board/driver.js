@@ -38,7 +38,7 @@ function drawRingChart() {
 					
 				var value_group = chart.append("svg:g")
 					.attr("class", "value_group")
-					.attr("transform", "translate("+ -(w*.30)+","+ -(h*-.00)+")");
+					.attr("transform", "translate("+ -(w*.30)+","+ -(h*-.03)+")");
 
 				var path_group = chart.append("svg:g")
 					.attr("class", "path_group")
